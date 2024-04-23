@@ -18,11 +18,11 @@ async function startProgram() {
 async function startProgram() {
 
 	setMainLed({ r: 105, g: 50, b: 100 });
-	await speak("Hello Square", true);
+	await speak("Hello Hailey", true);
 	await delay(1);
 	for (var _i1 = 0; _i1 < 4; _i1++) {
 	setMainLed(getRandomColor());
-	await Sound.Game.Coin.play(true);
+	await Sound.Animal.Monkey.play(true);
 	await roll((getHeading() + 90), 30, 4);
 	await delay(1);
 
