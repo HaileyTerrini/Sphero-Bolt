@@ -11,7 +11,7 @@ async function startProgram() {
 	setMainLed({ r: 255, g: 0, b: 0});
 	await Sound.Animal.Monkey.play(true);
 	await speak("Booting obstacle course scan, scan completed, starting course.", true)
-	await roll((getHeading() -180), 80, 2.5);
+	await roll((getHeading() -180), 80, 3);
 	await delay(3);	
 
 	// Hailey- PC #6 - Checkpoint TWO - blue
@@ -19,7 +19,7 @@ async function startProgram() {
 	setMainLed({ r: 0, g: 0, b: 255});
 	await Sound.Animal.HorseGallop.play(true);
 	await speak("Checkpoint Two Commencing", true)
-	await roll((getHeading() -270), 70, 2.5);
+	await roll((getHeading() -270), 80, 3);
 	
 	await delay(3);
 
@@ -29,7 +29,18 @@ async function startProgram() {
 	setMainLed({ r: 0, g: 255, b: 0});
 	await Sound.Animal.Sheep.play(true);
 	await speak("Checkpoint Three Commencing", true)
-	await roll((getHeading() -70), 50, 2.5);
+	await roll((getHeading() -70), 60, 3);
 	
 	await delay(3);
+
+	// Hailey - PC #6 - Checkpoint FOUR - Purple
+	
+	setMainLed({ r: 0, g: 0, b: 0, p: 255});
+	await Sound.Animal.Whale.play(true);
+	await speak("Checkpoint Four Commencing", true)
+	await roll((getHeading() -150), 100, 4);
+	
+	await delay(3); 
+await Sound.Animal.Duck.play(true);
+
 }
